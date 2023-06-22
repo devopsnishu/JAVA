@@ -32,7 +32,7 @@ jobs:
     with:
   
       image_name: Javafile12
-  
+      dockerfile: ./Dockerfile
    
     secrets:
       DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
