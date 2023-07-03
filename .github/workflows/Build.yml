@@ -23,14 +23,14 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: Invoke echo 1 workflow using this action
-      uses: ./
+      uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: Message Echo 1
         token: ${{ secrets.PERSONAL_TOKEN }}
         inputs: '{"message": "blah blah"}'
 
     - name: Invoke echo 2 workflow using this action
-      uses: ./
+      uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: echo-2.yaml
         token: ${{ secrets.PERSONAL_TOKEN }}
