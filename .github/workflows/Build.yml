@@ -1,4 +1,4 @@
-name: CI-CD
+name: workflow
 
 on:
   push:
@@ -35,9 +35,4 @@ jobs:
         workflow: echo-2.yaml
         token: ${{ secrets.PERSONAL_TOKEN }}
 
-    - name: Invoke echo 1 workflow by id
-      uses: ./
-      with:
-        workflow: '1854247'
-        token: ${{ secrets.PERSONAL_TOKEN }}
-        inputs: '{"message": "Mango jam"}'
+    
